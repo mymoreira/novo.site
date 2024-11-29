@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio - Fondue House</title>
+
+    <link rel="stylesheet" href="style_home.css"> 
+
+    <link rel="stylesheet" href="styles.css"> <!-- Link para o arquivo de estilos CSS -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #000;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+        }
+        .menu-section {
+            margin-bottom: 40px;
+        }
+        .menu-section h2 {
+            color: #6B4F4F;
+            text-transform: uppercase;
+            text-align: center;
+        }
+        .menu-section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .menu-section li {
+            background-color: #fff;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .menu-section li h3 {
+            margin: 0;
+            font-size: 20px;
+            color: #6B4F4F;
+        }
+        .menu-section li p {
+            margin: 10px 0;
+        }
+        .price {
+            font-size: 18px;
+            font-weight: bold;
+            color: #4CAF50;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <h1><img src="house.png" alt="Logo da Casa" width="80" height="auto"></h1>
+        <a href="#inicio">Inicio</a>
+        <a href="home.html#sobre">Sobre nós</a>
+        <a href="reserva.html">Reservar</a>
+        <a href="cardapio">Cardápio</a>
+        <a href="contato">Contato</a>
+        <a href="login"><img src="img_logim.png" alt="Login"></a>
+    </nav>
+    <header>
+        <h1>Cardápio - Fondue House</h1>
+        <p>O melhor rodízio de fondue para você e sua família!</p>
+    </header>
+
+    <div class="container">
+        <!-- Rodízio de Carne -->
+        <div class="menu-section" id="rodizio-carne">
+            <h2>Rodízio de Carne</h2>
+            <ul>
+                <li>
+                    <h3>Carne de Boi</h3>
+                    <p>Deliciosas fatias de carne bovina, preparadas no ponto ideal para o seu paladar.</p>
+                    <span class="price">R$ 79,90 por pessoa</span>
+                </li>
+                <li>
+                    <h3>Frango</h3>
+                    <p>Peito de frango suculento, temperado com especiarias especiais.</p>
+                    <span class="price">R$ 69,90 por pessoa</span>
+                </li>
+                <li>
+                    <h3>Linguiça de Frango</h3>
+                    <p>Linguiças de frango defumadas para um toque único no fondue.</p>
+                    <span class="price">R$ 59,90 por pessoa</span>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Rodízio de Queijo -->
+        <div class="menu-section" id="rodizio-queijo">
+            <h2>Rodízio de Queijo</h2>
+            <ul>
+                <li>
+                    <h3>Queijo Suíço</h3>
+                    <p>Queijo suíço derretido, cremoso e saboroso para o fondue de queijo.</p>
+                    <span class="price">R$ 79,90 por pessoa</span>
+                </li>
+                <li>
+                    <h3>Queijo Gouda</h3>
+                    <p>Uma mistura suave e intensa de queijo Gouda para um fondue saboroso.</p>
+                    <span class="price">R$ 79,90 por pessoa</span>
+                </li>
+                <li>
+                    <h3>Queijo Brie</h3>
+                    <p>Queijo Brie cremoso, com sabor delicado e ideal para os fãs de queijos finos.</p>
+                    <span class="price">R$ 89,90 por pessoa</span>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Rodízio de Chocolate -->
+        <div class="menu-section" id="rodizio-chocolate">
+            <h2>Rodízio de Chocolate</h2>
+            <ul>
+                <li>
+                    <h3>Chocolate Belga</h3>
+                    <p>Chocolate belga de alta qualidade, derretido e preparado com carinho.</p>
+                    <span class="price">R$ 49,90 por pessoa</span>
+                </li>
+                <li>
+                    <h3>Chocolate ao Leite</h3>
+                    <p>Chocolate ao leite cremoso, para um sabor mais doce e suave.</p>
+                    <span class="price">R$ 49,90 por pessoa</span>
+                </li>
+                <li>
+                    <h3>Chocolate Amargo</h3>
+                    <p>Chocolate amargo, intenso e perfeito para quem prefere um sabor mais forte.</p>
+                    <span class="price">R$ 59,90 por pessoa</span>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Bebidas -->
+        <div class="menu-section" id="bebidas">
+            <h2>Bebidas</h2>
+            <ul>
+                <li>
+                    <h3>Vinho Tinto</h3>
+                    <p>Vinho tinto suave para acompanhar o seu fondue.</p>
+                    <span class="price">R$ 39,90 taça</span>
+                </li>
+                <li>
+                    <h3>Vinho Branco</h3>
+                    <p>Vinho branco leve e refrescante, perfeito para o rodízio de queijo.</p>
+                    <span class="price">R$ 39,90 taça</span>
+                </li>
+                <li>
+                    <h3>Refrigerante</h3>
+                    <p>Opções de refrigerantes variados para todos os gostos.</p>
+                    <span class="price">R$ 9,90 lata</span>
+                </li>
+                <li>
+                    <h3>Suco Natural</h3>
+                    <p>Suco natural de frutas frescas e deliciosas.</p>
+                    <span class="price">R$ 12,90 copo</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Fondue House | Todos os direitos reservados</p>
+    </footer>
+
+</body>
+</html>

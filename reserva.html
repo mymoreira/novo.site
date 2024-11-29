@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservas - Fondue House</title>
+
+    <link rel="stylesheet" href="style_home.css"> 
+    <link rel="stylesheet" href="style_reserva.css"> 
+
+    <style>
+       
+        #pixDetails {
+            display: none;
+            margin-top: 15px;
+            background-color: #f1f1f1;
+            padding: 15px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+<div class="reservaaqui">
+    <nav>
+        <h1><img src="house.2.png" alt="Logo" width="80" height="auto"></h1>
+        <a href="home.html">Início</a>
+        <a href="home.html#sobre">Sobre nós</a>
+        <a href="reserva.html">Reservar</a>
+        <a href="cardapio.html">Cardápio</a>
+        <a href="contato.html">Contato</a>
+        <a href="login.html"><img src="img_logim.png" alt="Login"></a>
+    </nav>
+
+    <div id="reservas" class="reservation-form">
+        <h2>Para fazer uma reserva voçê deve estar cadastrado em nosso site! Caso não tenha cadastro, vá até o final da pagina e se cadestre. <br> Faça sua Reserva:</h2>
+
+        <form id="reservaForm" action="reservar" method="POST" onsubmit="return validateForm()">
+           
+            <label for="nome">Nome Completo</label>
+            <input type="text" id="nome" name="nome" required placeholder="Seu nome completo">
+
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" required placeholder="Seu e-mail">
+
+            <label for="data">Data da Reserva</label>
+            <input type="date" id="data" name="data" required>
+
+            <label for="hora">Hora da Reserva</label>
+            <input type="time" id="hora" name="hora" required>
+
+            <label for="numAdulto">Número de pessoas (+14 anos)</label>
+<select id="numAdulto" name="numAdulto" required onchange="calcularPreco()">
+    <option value="1">1 Adulto</option>
+    <option value="2">2 Adultos</option>
+    <option value="3">3 Adultos</option>
+    <option value="4">4 Adultos</option>
+    <option value="5">5 Adultos</option>
+    <option value="6">6 Adultos</option>
+    <option value="7">7 Adultos</option>
+    <option value="8">8 Adultos</option>
+    <option value="9">9 Adultos</option>
+    <option value="10">10 Adultos</option>
+    <option value="11">11 Adultos</option>
+    <option value="12">12 Adultos</option>
+    <option value="13">13 Adultos</option>
+    <option value="14">14 Adultos</option>
+    <option value="15">15 Adultos</option>
+    <option value="16">16 Adultos</option>
+    <option value="17">17 Adultos</option>
+    <option value="18">18 Adultos</option>
+    <option value="19">19 Adultos</option>
+    <option value="20">20 Adultos</option>
+    <option value="21">21 Adultos</option>
+    <option value="22">22 Adultos</option>
+    <option value="23">23 Adultos</option>
+    <option value="24">24 Adultos</option>
+    <option value="25">25 Adultos</option>
+    <option value="26">26 Adultos</option>
+    <option value="27">27 Adultos</option>
+    <option value="28">28 Adultos</option>
+    <option value="29">29 Adultos</option>
+    <option value="30">30 Adultos</option>
+   
+</select>
+
+<label for="numCrianca">Número de crianças (entre 6 a 14 anos)</label>
+<select id="numCrianca" name="numCrianca" required onchange="calcularPreco()">
+    <option value="0">0 Crianças</option>
+    <option value="1">1 Criança</option>
+    <option value="2">2 Crianças</option>
+    <option value="3">3 Crianças</option>
+    <option value="4">4 Crianças</option>
+    <option value="5">5 Crianças</option>
+    <option value="6">6 Crianças</option>
+    <option value="7">7 Crianças</option>
+    <option value="8">8 Crianças</option>
+    <option value="9">9 Crianças</option>
+    <option value="10">10 Crianças</option>
+    <option value="11">11 Crianças</option>
+    <option value="12">12 Crianças</option>
+    <option value="13">13 Crianças</option>
+    <option value="14">14 Crianças</option>
+    <option value="15">15 Crianças</option>
+    <option value="16">16 Crianças</option>
+    <option value="17">17 Crianças</option>
+    <option value="18">18 Crianças</option>
+    <option value="19">19 Crianças</option>
+    <option value="20">20 Crianças</option>
+    <option value="21">21 Crianças</option>
+    <option value="22">22 Crianças</option>
+    <option value="23">23 Crianças</option>
+    <option value="24">24 Crianças</option>
+    <option value="25">25 Crianças</option>
+    <option value="26">26 Crianças</option>
+    <option value="27">27 Crianças</option>
+    <option value="28">28 Crianças</option>
+    <option value="29">29 Crianças</option>
+    <option value="30">30 Crianças</option>
+   
+</select>
+
+<label for="tipoFondue">Tipo de Fondue</label>
+<select id="tipoFondue" name="tipoFondue" required onchange="calcularPreco()">
+    <option value="carne">Fondue de Carne - R$ 88,50</option>
+    <option value="queijo">Fondue de Queijo - R$ 80,00</option>
+    <option value="chocolate">Fondue de Chocolate - R$ 70,00</option>
+    <option value="todos">Fondue Completo (Todos os tipos) - R$ 189,99</option>
+</select>
+
+
+
+
+            <div>
+                <label for="mensagem">Mensagem (opcional)</label>
+                <textarea id="mensagem" name="mensagem" rows="4" placeholder="Alguma observação sobre a sua reserva..."></textarea>
+
+                <div id="precoTotal" class="preco-total">
+                    Preço Total: R$ 0,00
+                </div>
+
+                <div class="payment-section">
+                    <label for="metodoPagamento">Método de Pagamento</label>
+                    <select id="metodoPagamento" name="metodoPagamento" required onchange="mostrarParcelamento()">
+                        <option value="cartaoDebito">Cartão de Débito</option>
+                        <option value="cartaoCredito">Cartão de Crédito</option>
+                        <option value="boleto">Boleto Bancário</option>
+                        <option value="pix">Pix</option> 
+                    </select>
+
+                    <div id="cartaoDetails" class="payment-details">
+                        <label for="numeroCartao">Número do Cartão</label>
+                        <input type="text" id="numeroCartao" name="numeroCartao" placeholder="Digite o número do seu cartão" required>
+
+                        <label for="dataValidade">Data de Validade</label>
+                        <input type="month" id="dataValidade" name="dataValidade" required>
+
+                        <label for="codigoSeguranca">Código de Segurança</label>
+                        <input type="text" id="codigoSeguranca" name="codigoSeguranca" placeholder="CVV" required>
+
+                        <div id="parcelamento" class="parcelas">
+                            <label for="parcelasSelect">Parcelar em:</label>
+                            <select id="parcelasSelect" name="parcelasSelect">
+                                <option value="1">1 vez (sem juros)</option>
+                                <option value="2">2 vezes (sem juros)</option>
+                                <option value="3">3 vezes (sem juros)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div id="boletoDetails" class="payment-details" style="display:none;">
+                        <p>Você receberá um boleto bancário no e-mail informado após a confirmação da reserva.</p>
+                    </div>
+
+                    <div id="pixDetails" class="payment-details">
+                        <p>Pagamento via Pix: Utilize a chave <strong>fonduehouse@pix.com.br</strong> para realizar o pagamento.</p>
+                    </div>
+                </div>
+
+                <button type="submit" class="confirma">Confirmar Reserva</button>
+            </div>
+
+            <br>
+           
+        </form> 
+        <button onclick="window.location.href='cadastro.html';">Criar Conta</button>
+
+    </div>
+
+    <div id="mensagemReserva" class="message">
+        Reserva concluída! Entraremos em contato pelo email cadastrado.
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Fondue House - Todos os direitos reservados.</p>
+    </footer>
+</div> 
+
+<script>
+   function calcularPreco() {
+    const numAdulto = parseInt(document.getElementById('numAdulto').value);
+    const numCrianca = parseInt(document.getElementById('numCrianca').value);
+    const tipoFondue = document.getElementById('tipoFondue').value;
+
+   
+    let precoAdulto = 0;
+    let precoCrianca = 0;
+
+    if (tipoFondue === 'carne') {
+        precoAdulto = 88.50;
+        precoCrianca = precoAdulto / 2; 
+        precoAdulto = 80.00;
+        precoCrianca = precoAdulto / 2; 
+    } else if (tipoFondue === 'chocolate') {
+        precoAdulto = 70.00;
+        precoCrianca = precoAdulto / 2; 
+    } else if (tipoFondue === 'todos') {
+        precoAdulto = 169.99;
+        precoCrianca = precoAdulto / 2; 
+    }
+
+  
+    const precoTotal = (numAdulto * precoAdulto) + (numCrianca * precoCrianca);
+
+
+    document.getElementById('precoTotal').textContent = `Preço Total: R$ ${precoTotal.toFixed(2)}`;
+}
+
+
+   
+    function mostrarParcelamento() {
+        const metodoPagamento = document.getElementById('metodoPagamento').value;
+        const parcelamento = document.getElementById('parcelamento');
+        const cartaoDetails = document.getElementById('cartaoDetails');
+        const boletoDetails = document.getElementById('boletoDetails');
+        const pixDetails = document.getElementById('pixDetails');
+
+        if (metodoPagamento === 'cartaoCredito') {
+            cartaoDetails.style.display = 'block';
+            parcelamento.style.display = 'block';
+            boletoDetails.style.display = 'none';
+            pixDetails.style.display = 'none';
+        } else if (metodoPagamento === 'cartaoDebito') {
+            cartaoDetails.style.display = 'block';
+            parcelamento.style.display = 'none';
+            boletoDetails.style.display = 'none';
+            pixDetails.style.display = 'none';
+        } else if (metodoPagamento === 'boleto') {
+            cartaoDetails.style.display = 'none';
+            parcelamento.style.display = 'none';
+            boletoDetails.style.display = 'block';
+            pixDetails.style.display = 'none';
+        } else if (metodoPagamento === 'pix') {
+            cartaoDetails.style.display = 'none';
+            parcelamento.style.display = 'none';
+            boletoDetails.style.display = 'none';
+            pixDetails.style.display = 'block'; // Exibe o Pix
+        }
+    }
+
+    function validateForm() {
+        const nome = document.getElementById('nome').value;
+        const email = document.getElementById('email').value;
+        const data = document.getElementById('data').value;
+        const hora = document.getElementById('hora').value;
+        const numAdulto = document.getElementById('numAdulto').value;
+        const numCrianca = document.getElementById('numCrianca').value;
+        const metodoPagamento = document.getElementById('metodoPagamento').value;
+
+        if (!nome || !email || !data || !hora || !numAdulto || !numCrianca || !metodoPagamento) {
+            alert("Por favor, preencha todos os campos obrigatórios.");
+            return false;
+        }
+
+        // Para a parte de pagamento
+        if (metodoPagamento === 'cartaoCredito' || metodoPagamento === 'cartaoDebito') {
+            const numeroCartao = document.getElementById('numeroCartao').value;
+            const dataValidade = document.getElementById('dataValidade').value;
+            const codigoSeguranca = document.getElementById('codigoSeguranca').value;
+
+            if (!numeroCartao || !dataValidade || !codigoSeguranca) {
+                alert("Por favor, preencha todos os campos do pagamento com cartão.");
+                return false;
+            }
+        }
+
+        mostrarMensagem();
+        return false; // Impede o envio do formulário para teste
+    }
+
+    // A mensagem
+    function mostrarMensagem() {
+        document.getElementById("mensagemReserva").style.display = "block";
+        document.getElementById("mensagemReserva").scrollIntoView({behavior: "smooth"});
+        document.getElementById("reservaForm").reset();
+        calcularPreco(); // Atualiza o preço
+    }
+</script>
+
+</body>
+</html>

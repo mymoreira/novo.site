@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Cliente - Fondue House</title>
+    <link rel="stylesheet" href="style_cadastro.css">
+    <link rel="stylesheet" href="style_home.css">
+    <link rel="stylesheet" href="php_cadastro.php">
+</head>
+<body>
+
+    <nav>
+        <h1><img src="house.2.png" alt="Logo da Casa" width="80" height="auto"></h1>
+        <a href="home.html">Início</a>
+        <a href="home.html#sobre">Sobre nós</a>
+        <a href="reserva.html">Reservar</a>
+        <a href="cardapio.html">Cardápio</a>
+        <a href="contato.html">Contato</a>
+        <a href="login.html"><img src="img_logim.png" alt="Login"></a>
+    </nav>
+
+    <div class="form-container">
+        <h2>Cadastro de Cliente</h2>
+        <p>Preencha os campos abaixo para criar uma conta e fazer reservas de forma mais rápida!</p>
+
+        <!-- Formulário de Cadastro -->
+        <form id="cadastroForm" action="processa_cadastro.php" method="POST">
+            <label for="nome">Nome Completo</label>
+            <input type="text" id="nome" name="nome" required placeholder="Digite seu nome completo">
+
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" required placeholder="Digite seu e-mail">
+
+            <label for="telefone">Telefone</label>
+            <input type="tel" id="telefone" name="telefone" required placeholder="Digite seu telefone" pattern="[0-9]{2}[0-9]{9}" title="Formato válido: 11987654321">
+
+            <label for="cpf">CPF</label>
+            <input type="text" id="cpf" name="cpf" required placeholder="Digite seu CPF" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" title="Formato válido: 123.456.789-00" maxlength="14">
+
+            <label for="dataNascimento">Data de Nascimento</label>
+            <input type="date" id="dataNascimento" name="dataNascimento" required>
+
+            <label for="endereco">Endereço</label>
+            <input type="text" id="endereco" name="endereco" required placeholder="Digite seu endereço">
+
+            <label for="senha">Senha</label>
+            <input type="password" id="senha" name="senha" required placeholder="Escolha uma senha">
+
+            <label for="confirmarSenha">Confirmar Senha</label>
+            <input type="password" id="confirmarSenha" name="confirmarSenha" required placeholder="Confirme sua senha">
+
+            <!-- Botão de envio do formulário -->
+            <button type="submit">Cadastrar</button>
+        </form>
+
+        <p>Já tem uma conta? <a href="login.html">Faça login aqui</a></p>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Fondue House - Todos os direitos reservados</p>
+    </footer>
+
+    <!-- Script para redirecionar após o envio do formulário -->
+    <script>
+        // Captura o formulário pelo id
+        const form = document.getElementById('cadastroForm');
+
+        // Adiciona um evento de "submit" ao formulário
+        form.addEventListener('submit', function(event) {
+            // Previne o envio padrão para testar o redirecionamento
+            event.preventDefault();
+
+            // Aqui você pode colocar seu código de validação ou de envio do formulário
+            // Após o processamento, o redirecionamento ocorre
+            // Por enquanto, vamos redirecionar diretamente para login.html
+
+            window.location.href = 'login.html';
+        });
+    </script>
+
+</body>
+</html>

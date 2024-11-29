@@ -1,0 +1,234 @@
+
+ body {
+   
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    background-color:#f5f5dc; 
+    color:#4b2e1a;
+    overflow-y: scroll;
+}
+
+
+nav {
+    background:#d1b28e;
+    padding: 2px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    top: 0;
+   
+   
+    
+}
+
+ @font-face {
+        
+        font-family: 'Railey';
+        src: url('fontes/railey.ttf.ttf') format('truetype'); /* Certifique-se de usar o nome correto */
+    }
+    @font-face {
+        
+        font-family: 'Playfair';
+        src: url('fontes/Playfair.ttf') format('truetype'); /* Certifique-se de usar o nome correto */
+    }
+    
+    nav {
+        font-family: 'Railey', sans-serif; /* Aplique a fonte no menu de navegação */
+    }
+
+nav h1 img {
+    width: 80px;
+    height: auto;
+}
+
+nav a {
+  
+    background-color:#d1b28e;
+    border-color: #d1b28e 1px solid transparent;
+  
+   
+    font-size: 2.2em;
+
+    color: #4b2e1a;
+    margin: 0 15px;
+    text-decoration: none;
+    
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+    transition: all 0.4s ease; 
+}
+nav a:focus {
+    outline: none;
+    box-shadow: #d1b28e; 
+    background-color: #d1b28e; 
+
+   text-emphasis-color: #d1b28e; 
+}
+
+nav a:hover {
+    background-color: #4b2e1a ;
+    color:#d1b28e ; /*cor texto ao passar mause*/
+    transform: scale(1.1); /* Aumenta um pouco o tamanho */
+    background-color:#502213;  /* Cor de fundo do btn ao passar mause */
+    border-color:#502213; /* Borda com a mesma cor */
+}
+
+.banner {
+    position: relative;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+    font-size: 2em;
+    opacity: 0; /* Inicialmente invisível */
+    animation: fadeIn 2s forwards; /* Animação de transição */
+    height: 100vh;
+    background-image: url('fondue.jpg'), url('fondue2.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #f5f5dc; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    overflow: hidden; /* Evita que o overlay ultrapasse o banner */
+}
+
+.banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Ajuste a opacidade para o escurecimento desejado */
+    z-index: 1; /* Camada abaixo do texto e do botão */
+}
+
+.banner h1 {
+    position: relative; /* Garante que o texto esteja acima do overlay */
+    margin: 0;
+    text-align: center;
+    padding: 20px;
+    font-size: 3.5em;
+    font-family: 'Railey', sans-serif;
+    
+    font-weight: normal; /* Remove o negrito */
+    z-index: 2; /* Camada acima do overlay */
+}
+
+
+.reservar {
+    font-family: 'Playfair', sans-serif; 
+    position: relative; /* Garante que o botão fique acima da camada de sobreposição */
+    z-index: 3; /* Camada acima do overlay e abaixo do texto */
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    background-color: transparent;
+    color: #f5f5dc;  /* Cor marrom */
+    border: 2px solid #f5f5dc;  /* Borda marrom */
+ 
+    transition: all 0.3s ease;
+    font-weight: 800;
+}
+.reservar:hover {
+    background: transparent; 
+    color:#d1b28e; /* Cor do texto em branco */
+    border-color:#d1b28e; /* Borda mais escura ao passar o mouse */
+    transform: scale(1.1);
+}
+
+
+
+/* Botão de reserva */
+
+
+
+
+/* Seção de conteúdo */
+/* Animação de transição */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+.content p {
+    font-size: 1.1em;
+    line-height: 1.8;
+}
+
+/* Efeito hover para o logo de login */
+nav h1 img {
+    width: 150px; /* Altere o valor conforme desejado */
+    height: auto;
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    background-color: #d1b28e;
+    color: #502213;
+    margin-top: 20px;
+    font-size: 2em;
+    font-family: 'Playfair', sans-serif;
+ 
+}
+
+
+
+
+
+
+.content {
+    padding: 200px;
+    font-family: 'Playfair';
+    font-size: 1.2em;
+    line-height: 1.8;
+    color: #341608; /* Cor mais quente para o texto */
+    text-align: center;
+    background: radial-gradient(circle, #f5f5dc, #502213); /* Efeito místico */
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.content h2 {
+    font-family: 'Playfair';    font:normal;
+    font-size: 2.5em;
+    color: #502213;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.content p {
+    font-size: 2em;
+    line-height: 1;
+    color: #341608;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+/* Efeito hover para o logo de login */
+nav img {
+    width: 55px;
+    height: auto;
+}
+
+

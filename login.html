@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Fondue House</title>
+    <link rel="stylesheet" href="style_home.css"> 
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="php_login.php">
+    <script>
+        function redirecionarHome(event) {
+          
+            event.preventDefault();
+
+          
+            const email = document.getElementById("email").value;
+            const senha = document.getElementById("senha").value;
+
+            if (email && senha) {
+              
+                window.location.href = "home.html"; 
+            } else {
+                alert("Por favor, preencha todos os campos corretamente.");
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <nav>
+        <h1><img src="house.2.png" alt="Logo da Casa" width="80" height="auto"></h1>
+        <a href="home.html">Início</a>
+        <a href="home.html#sobre">Sobre nós</a>
+        <a href="reserva.html">Reservar</a>
+        <a href="cardapio.html">Cardápio</a>
+        <a href="contato.html">Contato</a>
+        <a href="login.html"><img src="img_logim.png" alt="Login"></a>
+    </nav>
+
+   
+    <div class="form-container">
+        <h2>Login</h2>
+        <p>Entre com sua conta para acessar seu painel e fazer reservas!</p>
+
+        <form id="formLogin" method="POST">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" required placeholder="Digite seu e-mail">
+
+            <label for="senha">Senha</label>
+            <input type="password" id="senha" name="senha" required placeholder="Digite sua senha">
+
+            <button type="submit" class="confirma" onclick="redirecionarHome(event)">Entrar</button>
+        </form>
+
+        <p>Ainda não tem uma conta? <a href="cadastro.html">Cadastre-se aqui</a></p>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Fondue House - Todos os direitos reservados</p>
+    </footer>
+
+</body>
+</html>

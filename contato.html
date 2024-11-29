@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Fondue House</title>
+    <link rel="stylesheet" href="style_home.css"> <!-- Vincule seu CSS principal -->
+    <link rel="stylesheet" href="contato.css"> <!-- Estilos específicos para a página de contato -->
+
+    <style>
+        /* Estilo para a mensagem de sucesso */
+        #success-message {
+            display: none;
+            color: rgb(0, 2, 128);
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <h1><img src="house.2.png" alt="Logo da Casa" width="100" height="auto"></h1>
+        <a href="home.html#inicio">Início</a>
+        <a href="home.html#sobre">Sobre nós</a>
+        <a href="reserva.html">Reservar</a>
+        <a href="cardapio.html">Cardápio</a>
+        <a href="contato.html">Contato</a>
+        <a href="login.html"><img src="img_logim.png" alt="Login"></a>
+    </nav>
+
+    <!-- Seção de Contato -->
+    <div id="contato" class="content">
+        <h2>Entre em Contato Conosco</h2>
+        <p>Tem alguma dúvida ou sugestão? Fique à vontade para entrar em contato conosco!</p>
+
+        <!-- Formulário de Contato -->
+        <form id="contact-form" action="processa_contato.php" method="POST">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome" required placeholder="Digite seu nome">
+
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" required placeholder="Digite seu e-mail">
+
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" rows="4" required placeholder="Escreva sua mensagem"></textarea>
+
+            <button type="submit">Enviar Mensagem</button>
+        </form>
+
+        <!-- Mensagem de sucesso -->
+        <div id="success-message">Mensagem enviada com sucesso!</div>
+    </div>
+
+    <!-- Caixa de Informações de Contato -->
+    <div class="informacoes-contato">
+        <h3>Informações de Contato</h3>
+        <ul>
+            <li><strong>Endereço:</strong> <a>Rua dos três Irmãos - Morumbi, São Paulo - SP 0567839</a></li>
+            <li><strong>Email:</strong> <a href="mailto:fondueHouse@gmail.com">fondueHouse@gmail.com</a></li>
+            <li><strong>Telefone:</strong> <a href="tel:+551199999999">11 99999-9999</a></li>
+            <li><strong>Instagram:</strong> <a href="https://instagram.com/FondueHouse" target="_blank">@FondueHouse</a></li>
+            <li><strong>App:</strong> <a href="https://www.fonduehouse.com.br/app" target="_blank">Baixe o App Fondue House</a></li>
+        </ul>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Fondue House - Todos os direitos reservados</p>
+    </footer>
+
+    <!-- Script para limpar formulário e mostrar mensagem de sucesso -->
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();  // Evita o envio padrão do formulário
+
+            // Limpar os campos do formulário
+            document.getElementById('nome').value = '';
+            document.getElementById('email').value = '';
+            document.getElementById('mensagem').value = '';
+
+            // Mostrar a mensagem de sucesso
+            document.getElementById('success-message').style.display = 'block';
+
+            // Opcional: esconder a mensagem de sucesso após alguns segundos
+            setTimeout(function() {
+                document.getElementById('success-message').style.display = 'none';
+            }, 5000); // Mensagem desaparece após 5 segundos
+        });
+    </script>
+
+</body>
+</html>

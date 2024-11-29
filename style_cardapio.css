@@ -1,0 +1,227 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    background-color:#fff;
+    color: #4b2e1a; 
+overflow-y: scroll;
+}
+
+
+
+
+
+.content {
+    font-family: Arial, sans-serif;
+    font-weight: 900;
+    color:#4b2e1a;
+    text-align: center;
+    padding: 70px;
+    background: #fff;
+    overflow-y: scroll;
+}
+
+.content h4 {
+    color:#d1b28e;
+
+}
+.content h5 {
+    color: #4b2e1a;
+}
+.content h2 {
+    font-family: 'Playfair';
+    font-size: 2em;
+    color: #4b2e1a;
+}
+
+.content p {
+    font-size: 1.9em;
+    line-height: 1.8;
+}
+
+
+.cardapio-section {
+    border-radius: 25px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 30px;
+    background: radial-gradient(circle , #f5f5dc, #d1b28e, #6c4f37 );
+}
+
+.cardapio-item {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    width: 30%;
+    padding: 15px;
+    margin: 10px 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cardapio-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.cardapio-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+.content h3 {
+    font-family: 'Playfair';
+
+        font-size: 1.9em;
+    }
+.cardapio-item h3 {
+    color: #4b2e1a;
+    font-size: 1.6em;
+    margin-top: 10px;
+}
+
+.cardapio-item p {
+    font-size: 1.1em;
+    color: #4b2e1a;
+}
+
+.cardapio-item .preco {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #502213;
+    margin-top: 10px;
+}
+/* Ajustando a exibição das seções de acompanhamentos */
+.acompanhamentos {
+    margin-bottom: 20px;
+}
+
+.acompanhamentos h4 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.cardapio-item {
+    display: inline-block;
+    width: 30%;
+    margin: 10px 1.5%;
+    vertical-align: top;
+    text-align: center;
+    background-color: #f5f5f5;
+    padding: 10px;
+    border-radius: 18px;
+}
+
+
+.cardapio-item img {
+    width: 350px; 
+    height: 350px; 
+    object-fit: cover; 
+    border-radius: 8px;
+}
+.acompanhamentos-box img{
+    width: 350px; 
+    height: 350px; 
+    object-fit: cover; 
+    border-radius: 8px;
+}
+.cardapio-item h5 {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.cardapio-item p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.cardapio-item .preco {
+    font-size: 1.2rem;
+    color: #b12704;
+    font-weight: bold;
+}
+
+.acompanhamentos .cardapio-item {
+    width: 30%;
+}
+
+.cardapio-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+#cardapio {
+    margin: 30px;
+    padding: 20px;
+}
+
+.acompanhamentos-section {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.acompanhamentos.caixa {
+    border-radius: 25px;
+    width: 30%; /* Ajuste a largura para que as caixas fiquem uniformes */
+    padding: 20px;
+    box-sizing: border-box;
+    border: 1px solid #ccc; /* Adiciona uma borda para cada caixa */
+    background-color: radial-gradient(circle , #f5f5dc, #d1b28e, #6c4f37 );
+}
+
+.acompanhamentos .cardapio-item {
+    margin-bottom: 10px;
+}
+
+.acompanhamentos h4 {
+    text-align: center;
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+.acompanhamentos-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.acompanhamentos-box {
+    background:radial-gradient(circle , #f5f5dc, #d1b28e, #6c4f37 );
+    padding: 20px;
+    border-radius: 25px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cardapio-item {
+    margin-bottom: 15px;
+}
+
+
+
+@media (max-width: 768px) {
+    .cardapio-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cardapio-item {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+}
+@font-face {
+    
+    font-family: 'Playfair';
+    src: url('fontes/Playfair.ttf') format('truetype'); /* Certifique-se de usar o nome correto */
+}

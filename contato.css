@@ -1,0 +1,155 @@
+.body{
+    overflow-y: scroll;
+}
+nav {
+    width: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh; 
+}
+
+@font-face {
+    font-family: 'Railey';
+    src: url('fontes/railey.ttf.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Playfair';
+    src: url('fontes/Playfair.ttf') format('truetype');
+}
+
+
+form {
+    font-family: 'Playfair', sans-serif;
+    font-size: 1.2em; 
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 500px;
+    gap: 20px;
+    text-align: left;
+    background-color: #f5f5dc; 
+    border-radius: 10px; 
+    padding: 15px; 
+}
+
+label {
+    font-size: 0.9rem; 
+    margin-bottom: 5px;
+}
+
+input, textarea, button {
+    padding: 10px;
+    font-size: 1rem;
+    width: 100%;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+
+button {
+    cursor: pointer;
+    width: 100%;
+    padding: 12px;
+    color: #502213;
+    border: none;
+    font-size: 1em; 
+    border-radius: 5px;
+    background: radial-gradient(circle, #cfb393, #502213);
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    color: #f5f5dc;
+    background: radial-gradient(circle, #502213, #bea281);
+    border-color: #4b2e1a;
+    transform: scale(1.1);
+}
+
+
+.informacoes-contato {
+    width: 100%;
+    max-width: 900px;
+    background-color: #bea281; 
+    padding: 20px;
+    color: #502213; 
+    border-radius: 10px;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.informacoes-contato h3 {
+    font-size: 1.5rem; 
+    margin-bottom: 15px;
+}
+
+.informacoes-contato ul {
+    list-style: none;
+    padding: 0;
+}
+
+.informacoes-contato li {
+    margin: 10px 0;
+    font-size: 1rem; 
+}
+
+.informacoes-contato a {
+    color: #f5f5dc; 
+    text-decoration: none;
+}
+
+.informacoes-contato a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 15px; 
+    background-color: #502213;
+    color: #f5f5dc;
+    margin-top: 40px;
+}
+
+.content form {
+    font-family: 'Playfair', sans-serif;
+    font-size: 1rem;
+}
+
+.content {
+    font-size: 1.2em; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px; 
+    width: 100%;
+    max-width: 900px;
+    text-align: center;
+    background: #f5f5dc;
+    border-radius: 10px; 
+    border-color: #502213;
+    margin-top: 20px;
+}
+
+.content p {
+    font-family: 'Playfair', sans-serif;
+    font-size: 1em; 
+
+}
+#contato {
+    background-color: #f5f5dc; 
+}
+
+h2 {
+    font-family: 'Playfair', sans-serif;
+    font-size: 1.5rem; 
+    color: #502213; 
+}

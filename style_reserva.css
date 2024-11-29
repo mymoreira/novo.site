@@ -1,0 +1,151 @@
+ .body{
+    overflow-y: scroll;
+ }
+  .message {
+    font-family: 'Playfair';
+    display: none; /* Inicialmente a mensagem fica oculta */
+    background-color:  #502213;
+    color: #dbc3a7;
+    padding: 15px;
+    margin-top: 20px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.preco-total {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+
+.payment-section {
+    margin-top: 30px;
+}
+
+.payment-section label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+
+.payment-section input, .payment-section select {
+    padding: 8px;
+    width: 100%;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.payment-section button {
+    background-color: #4CAF50;
+    color: #dbc3a7;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+}
+
+.payment-section button:hover {
+    background-color: #45a049;
+}
+
+
+.parcelas {
+    display: none;
+    margin-top: 10px;
+}
+
+.parcelas select {
+    font-size: 14px;
+}
+
+
+ .reservation-form {
+    background-color: #fff;
+    padding: 40px;
+    max-width: 600px;
+    margin: 100px auto;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+   
+}
+
+.reservaaqui {
+    font-family: 'Playfair';
+    background: radial-gradient(circle , #dbc3a7,  #502213);
+}
+
+.reservation-form h2 {
+    color: #6c4f37;
+    text-align: center;
+    margin-bottom: 20px;
+
+}
+
+.reservation-form input, .reservation-form select, .reservation-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 10px solid  radial-gradient(circle ,  #bea281, #502213);
+    border-radius: 4px;
+    background: #f5f5dc;
+    transition: all 0.3s ease;  /* Animação era para ser pelo menos*/
+}
+
+.reservation-form button {
+    width: 100%;
+    padding: 12px;
+    color:  #502213;
+    border: none;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    background: #cfb393;
+    transition: all 0.3s ease;  /* Animação  */
+}
+.reservation-form button:hover {
+    border: #502213;
+    color: #f5f5dc; /*cor do texto ao passar mause*/
+    transform: scale(1.1); /* Aumenta um pouco o tamanho */
+    background: radial-gradient(circle ,  #502213, #bea281); /* Cor de fundo do btn ao passar mause */
+    border-color:#4b2e1a ; 
+}
+
+
+
+.reservation-form label {
+    font-weight: bold;
+    
+}
+
+
+
+#tipoFondue {
+    margin-top: 10px;
+    padding: 10px;
+    width: 100%;
+    font-size: 1em;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    color: #4b2e1a;
+}
+@media (max-width: 768px) {
+    .cardapio-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cardapio-item {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+}
+@font-face {
+    
+    font-family: 'Playfair';
+    src: url('fontes/Playfair.ttf') format('truetype'); /* Certifique-se de usar o nome correto */
+}
